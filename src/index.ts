@@ -1,12 +1,6 @@
-type Record1<K extends keyof any, T> = {
-  [P in K]: T;
-};
-interface PageInfo {
-  title: string;
-}
-type Page = "home" | "about" | "contact";
-const x: Record1<Page, PageInfo> = {
-  home: { title: "home" },
-  about: { title: "about" },
-  contact: { title: "contact" },
-};
+import MiniReact from "./mini-react";
+import element from "./mini-react/element";
+console.log(element);
+const container = document.getElementById("app");
+
+MiniReact.render(element, container);

@@ -13,7 +13,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.(ts|tsx)$/,
         use: 'ts-loader',
         exclude: /node_modules/
       },
@@ -25,7 +25,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.ts', '.js'] //配置文件引入时省略后缀名
+    extensions: ['.ts', '.tsx', '.js'] //配置文件引入时省略后缀名
   },
   plugins: devMode ? [
     new HtmlWebpackPlugin({
